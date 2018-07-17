@@ -22,7 +22,7 @@ object Main extends App {
 
   val pacTemplate = Source.fromInputStream(getClass.getResourceAsStream("pacFileTemplate.txt")).getLines().mkString("\n")
 
-  val out = new PrintWriter("/home/work/person_env_setting/myproxy.pac")
+  val out = new PrintWriter("/home/weili/work/myproxy.pac")
   out.print("var domains = {")
   removeComment.foreach{ x =>
     out.println(s""" "$x": 1,""")
